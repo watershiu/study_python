@@ -25,7 +25,7 @@ bash XXX.sh
     conda activate $env_name
 在conda環境下便可以安裝package
 
-    conda numpy
+    conda install numpy
 在conda環境下移除package
 
     conda remove $env_name numpy
