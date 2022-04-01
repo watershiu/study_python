@@ -10,5 +10,32 @@ bash XXX.sh
 
 建立 conda 環境
 
-    conda create -n(name) $env_ename 
-若有.yml檔，
+    conda create -n(name) $env_name 
+若有.yml檔，則可以使用
+    
+    conda env create -f $conda_environment.yml -n $env_name
+便可以利用人家匯出的環境編制，建立並匯入屬於自身的conda環境
+
+匯出conda環境編制 **必須在conda環境內**
+
+    conda env export > $environment.yml
+
+執行conda環境
+
+    conda activate $env_name
+在conda環境下便可以安裝package
+
+    conda numpy
+在conda環境下移除package
+
+    conda remove $env_name numpy
+離開conda環境
+
+    conda deacitvate
+移除conda環境
+
+    conda env remove -n(name) $env_name
+常用conda 指令
+
+    conda list
+    conda env list
